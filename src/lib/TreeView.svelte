@@ -19,7 +19,7 @@
 	import Branch from './Branch.svelte';
 	import { SelectionProvider } from '$lib/providers/selection-provider.js';
 	import { DragDropProvider } from '$lib/providers/drag-drop-provider.js';
-	import uniq from 'lodash.uniq';
+	import { uniq } from 'lodash-es';
 	import {
 		calculateNewFocusedNode,
 		parseMovementDirection

@@ -1,5 +1,4 @@
-import orderBy from 'lodash.unionby'; // used by tree merge
-import uniqueBy from 'lodash.uniqby'; // used by tree merge
+import { unionBy, uniqBy as uniqueBy } from 'lodash-es'; // used by tree merge
 import {
 	type Node,
 	type HelperConfig,
@@ -112,7 +111,7 @@ export class TreeHelper {
 	}
 
 	mergeTrees(oldTree: Tree, addedTree: Tree, nodePath = 'nodePath') {
-		return orderBy(addedTree, oldTree, nodePath);
+		return unionBy(addedTree, oldTree, nodePath);
 	}
 
 	/** toggles expansion on
